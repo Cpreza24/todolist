@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -13,7 +9,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>To Do List</h1>
+        <div class="headerDiv">
+            <h1>To Do List</h1>
+            <h3>What's on the agenda today?</h3>
+        </div>
+        <div>
+            <form class="taskForm" action="">
+                <input class="submitInput" type="text" placeholder="ex: Clean garage" />
+                <input class="submitButton" type="submit" value="Add">
+            </form>
+        </div>
         
         <script src="script.js" async defer></script>
     </body>
