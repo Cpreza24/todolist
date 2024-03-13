@@ -1,6 +1,7 @@
 let form = document.querySelector('.taskForm');
 let inputBox = document.querySelector('.submitInput');
 let tasksContainer = document.querySelector('.tasksContainer');
+let taskItems = document.querySelector('.taskItems');
 let inputValue;
 let tasks = [];
 
@@ -18,10 +19,16 @@ form.addEventListener('submit', e => {
 
 // Handles the creation of a new task when
 function addNewTask(toDo) {
-    let newTask = document.createElement('p');
+    let newTask = document.createElement('li');
     let taskValue = document.createTextNode(toDo);
+    let taskCheck = document.createElement('input');
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'Delete';
+    taskCheck.type = 'checkbox';
+    newTask.appendChild(taskCheck);
     newTask.appendChild(taskValue);
-    tasksContainer.appendChild(newTask);
+    newTask.appendChild(deleteButton);
+    taskItems.appendChild(newTask);
 }
 
 
