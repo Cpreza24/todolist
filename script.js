@@ -24,6 +24,7 @@ function addNewTask(toDo) {
     let taskCheck = document.createElement('input');
     let deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Delete';
+    deleteButton.className = 'deleteBtn'
     taskCheck.type = 'checkbox';
     newTask.appendChild(taskCheck);
     newTask.appendChild(taskValue);
@@ -32,4 +33,15 @@ function addNewTask(toDo) {
 }
 
 
-// I think i have to loop through the array now because im getting undefined. 
+
+let removeTaskBtn = document.querySelectorAll('.deleteBtn');
+
+for(let i = 0; i <= removeTaskBtn.length; i++) {
+    removeTaskBtn[i].addEventListener('click', () => {
+        console.log('button clicked');
+    })
+}
+
+
+
+// I have to somehow add an event listener to the button that was added in the LI element. 
