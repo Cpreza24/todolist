@@ -32,16 +32,14 @@ function addNewTask(toDo) {
     taskItems.appendChild(newTask);
 }
 
+removeTask = document.querySelector('.deleteBtn');
+console.log(removeTask.classList);
 
 
-let removeTaskBtn = document.querySelectorAll('.deleteBtn');
-
-for(let i = 0; i <= removeTaskBtn.length; i++) {
-    removeTaskBtn[i].addEventListener('click', () => {
-        console.log('button clicked');
-    })
-}
-
-
+// for(let i = 0; i <= deleteButton.length; i++) {
+//     removeTaskBtn[i].addEventListener('click', () => {
+//         console.log('button clicked');
+//     })
+// }
 
 // I have to somehow add an event listener to the button that was added in the LI element. 
