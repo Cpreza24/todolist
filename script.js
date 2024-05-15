@@ -32,27 +32,26 @@ function addNewTask(toDo) {
     taskItems.appendChild(newTask);
 }
 
-//removeTask = document.querySelector('.deleteBtn');
+removeTask = document.querySelector('.deleteBtn');
 //console.log(removeTask.classList);
 
 taskList = document.querySelector('.taskItems');
 taskList.addEventListener('click', e => {
     if(e.target.type === 'submit') {
-        console.log('button clicked');
+        removeTask.parentNode.remove();
+        console.log('button clicked', removeTask.parentNode);
     } else {
         console.log(e.target.type)
     }
 })
 
+// for(let i = 0; i <= taskItems.length; i++) {
+//     console.log(i)
+// }
+// console.log(taskItems.length);
 
-function deleteTask() {
-    for(let i = 0; i <= deleteButton.length; i++) {
-        removeTaskBtn[i].addEventListener('click', () => {
-            console.log('button clicked');
-        })
-    }
-};
 
-deleteTask();
 
+//do i have to iterate through the array or loop through the buttons?
+//mu delete button only deletes the first item not the selecled item
 // I have to somehow add an event listener to the button that was added in the LI element. 
